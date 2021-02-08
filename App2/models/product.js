@@ -7,6 +7,7 @@ const p = path.join(
   'products.json'
 );
 
+// readFile helper function
 const getProductsFromFile = (cb) => {
   fs.readFile(p, (error, data) => {
     if (error) {
@@ -30,9 +31,6 @@ module.exports = class Product {
       });
     });
     console.log(require.main.filename);
-    fs.readFile(p, (error, data) => {
-
-    });
   }
 
   static fetchAll(cb) {
